@@ -1,12 +1,12 @@
 server:
   port: 7071
-#   ssl:
-#     enabled: true
-#     key-store: file:/home/carmel/tomcat.p12
-#     key-store-password: P@ssw0rd
-#     key-store-type: pkcs12
-#     key-alias: tomcat
-#     key-password: P@ssw0rd
+  ssl:
+    enabled: true
+    key-store: /home/carmel/tomcat.p12
+    key-store-password: P@ssw0rd
+    key-store-type: pkcs12
+    key-alias: tomcat
+    key-password: P@ssw0rd
 
 olive-client:
   client-id: olive@carmelsolutions
