@@ -1,7 +1,7 @@
 server:
   port: 7070
   ssl:
-    key-store: file:/home/carmel/tomcat.p12
+    key-store: /home/carmel/tomcat.p12
     key-store-password: P@ssw0rd
     key-store-type: pkcs12
     key-alias: tomcat
