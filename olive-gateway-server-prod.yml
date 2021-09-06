@@ -12,6 +12,9 @@ spring:
     name: olive-gateway-server
   cloud:
     gateway:
+      httpclient:
+        ssl:
+          useInsecureTrustManager: true
       discovery:
         locator:
           enabled: true
