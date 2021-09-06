@@ -11,7 +11,7 @@ eureka:
   client:
     serviceUrl: 
 #       defaultZone: https://gfkblr.in:7074/eureka/
-      defaultZone: https://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     register-with-eureka: false
     fetch-registry: false
     
