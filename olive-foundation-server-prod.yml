@@ -8,7 +8,7 @@ server:
     key-alias: tomcat
     key-password: P@ssw0rd
     trust.store: file:/home/carmel/tomcat.p12
-    trust.store.password: password
+    trust.store.password: P@ssw0rd
   
 #eureka:
 #  client:
