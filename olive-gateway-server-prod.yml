@@ -6,21 +6,21 @@ server:
     key-store-type: pkcs12
     key-alias: tomcat
     key-password: P@ssw0rd
-    trust.store: file:/home/carmel/tomcat.p12
-    trust.store.password: P@ssw0rd
+#     trust.store: file:/home/carmel/tomcat.p12
+#     trust.store.password: P@ssw0rd
 
 spring:
   application:
     name: olive-gateway-server
   cloud:
     gateway:
-      httpclient:
-        ssl:
-          useInsecureTrustManager: true
+#       httpclient:
+#         ssl:
+#           useInsecureTrustManager: true
       discovery:
         locator:
           enabled: true
-          url-expression: "'lb:http://'+serviceId"
+#           url-expression: "'lb:http://'+serviceId"
           lower-case-service-id: true
       routes:
         - id: olive-auth-service
