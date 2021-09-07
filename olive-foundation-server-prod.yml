@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: olive-foundation-server
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7074/eureka/
 
   security:
     oauth2:
