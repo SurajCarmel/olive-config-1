@@ -2,38 +2,27 @@ server:
   port: 7070
   ssl:
     enabled: true
-#     client-auth: need
-#     protocol: TLS
-#     enabled-protocols: TLSv1.2
     key-alias: tomcat
     key-store-password: P@ssw0rd
     key-store: file:/home/carmel/tomcat.p12
     key-store-type: pkcs12
     key-password: P@ssw0rd
-#     trust.store: file:/home/carmel/tomcat.p12
-#     trust.store.password: P@ssw0rd
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7074/eureka/
+    register-with-eureka: true
 
 spring:
   application:
     name: olive-gateway-server
   cloud:
     gateway:
-#       httpclient:
-#         ssl:
-#           trustedX509Certificates:
-#           - file:/home/carmel/localhost.pem
-#       x-forwarded:
-#         enabled: true
-#         for-enabled: true
-#         proto-enabled: true
-#         host-append: false
-#         port-append: false
-#         proto-append: false
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
-#           url-expression: "'lb:http://'+serviceId" 
       routes:
         - id: olive-auth-service
           uri: lb://olive-auth-server
@@ -75,32 +64,6 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/api/olive/1.0/kloudKichn/(?<segment>/?.*), /$\{segment}
-
-
-#  security:
-#    oauth2:
-#      resourceserver:
-#        jwt:
-#          jwk-set-uri: "http://localhost:7071/.well-known/jwks.json"
-          
-#eureka:
-#  client:
-#    region: default
-#    registry-fetch-interval-seconds: 5
-#    service-url:
-#      defaultZone: http://localhost:7074/eureka/
-      
-#logging:
-#  level:
-#    root: trace    
-
-#spring:
-#  cloud:
-#    gateway:
-#      httpclient:
-#        wiretap: true
-#      httpserver:
-#        wiretap: true
 
 logging:
   level:
