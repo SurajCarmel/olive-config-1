@@ -1,5 +1,5 @@
 server:
-  port: 7070
+  port: 80
   ssl:
     key-store: file:/home/carmel/tomcat.p12
     key-store-password: P@ssw0rd
