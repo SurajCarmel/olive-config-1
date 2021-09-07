@@ -22,18 +22,18 @@ spring:
 #         ssl:
 #           trustedX509Certificates:
 #           - file:/home/carmel/localhost.pem
-      x-forwarded:
-        enabled: true
-        for-enabled: true
-        proto-enabled: true
-        host-append: false
-        port-append: false
-        proto-append: false
+#       x-forwarded:
+#         enabled: true
+#         for-enabled: true
+#         proto-enabled: true
+#         host-append: false
+#         port-append: false
+#         proto-append: false
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
-          url-expression: "'lb:http://'+serviceId" 
+#           url-expression: "'lb:http://'+serviceId" 
       routes:
         - id: olive-auth-service
           uri: lb://olive-auth-server
