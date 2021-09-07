@@ -18,10 +18,10 @@ spring:
     name: olive-gateway-server
   cloud:
     gateway:
-#       httpclient:
-#         ssl:
-#           trustedX509Certificates:
-#           - file:/home/carmel/localhost.pem
+      httpclient:
+        ssl:
+          trustedX509Certificates:
+          - file:/home/carmel/localhost.pem
       discovery:
         locator:
           enabled: true
