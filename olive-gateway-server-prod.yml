@@ -26,9 +26,10 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+          url-expression: "'lb:http://'+serviceId" 
       routes:
         - id: olive-auth-service
-          uri: lb:http://olive-auth-server
+          uri: lb://olive-auth-server
           predicates:
             - Path=/api/olive/1.0/doLogin
             - Method=POST
@@ -37,7 +38,7 @@ spring:
             - RewritePath=/api/olive/1.0/doLogin, /api/v1/olive-login
 
         - id: olive-foundation-service
-          uri: lb:http://olive-foundation-server
+          uri: lb://olive-foundation-server
           predicates:
             - Path=/api/olive/1.0/foundation/**
           filters:
