@@ -4,11 +4,6 @@ server:
 spring:
   application:
     name: olive-foundation-server
-    
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:7074/eureka/
 
   security:
     oauth2:
@@ -24,7 +19,6 @@ eureka:
     driver-class-name: com.mysql.cj.jdbc.Driver
     initialization-mode: always
 
-
   jpa:
     hibernate:
 #      properties:
@@ -37,6 +31,11 @@ eureka:
     generate-ddl: true
     database: mysql
     database-platform: org.hibernate.dialect.MySQL5Dialect    
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7074/eureka/
       
 logging:
   file:
