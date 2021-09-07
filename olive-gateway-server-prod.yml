@@ -18,7 +18,7 @@ spring:
       httpclient:
         ssl:
           trustedX509Certificates:
-          - localhost.pem
+          - file:/home/carmel/localhost.pem
       discovery:
         locator:
           enabled: true
