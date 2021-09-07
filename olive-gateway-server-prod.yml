@@ -2,7 +2,7 @@ server:
   port: 7070
   ssl:
     enabled: true
-    client-auth: need
+#     client-auth: need
     protocol: TLS
     enabled-protocols: TLSv1.2
     key-alias: tomcat
