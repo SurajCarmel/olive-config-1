@@ -2,6 +2,9 @@ server:
   port: 7070
   ssl:
     enabled: true
+    client-auth: need
+    protocol: TLS
+    enabled-protocols: TLSv1.2
     key-alias: tomcat
     key-store-password: P@ssw0rd
     key-store: file:/home/carmel/tomcat.p12
