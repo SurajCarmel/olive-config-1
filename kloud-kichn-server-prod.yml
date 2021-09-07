@@ -1,11 +1,5 @@
 server:
   port: 7076
-#   ssl:
-#     key-store: file:/home/carmel/tomcat.p12
-#     key-store-password: P@ssw0rd
-#     key-store-type: pkcs12
-#     key-alias: tomcat
-#     key-password: P@ssw0rd
   
 spring:
   application:
@@ -38,6 +32,11 @@ spring:
     generate-ddl: true
     database: mysql
     database-platform: org.hibernate.dialect.MySQL5Dialect    
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7074/eureka/
       
 logging:
   file:
