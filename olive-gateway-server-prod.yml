@@ -22,6 +22,13 @@ spring:
 #         ssl:
 #           trustedX509Certificates:
 #           - file:/home/carmel/localhost.pem
+      x-forwarded:
+        enabled: true
+        for-enabled: true
+        proto-enabled: true
+        host-append: false
+        port-append: false
+        proto-append: false
       discovery:
         locator:
           enabled: true
