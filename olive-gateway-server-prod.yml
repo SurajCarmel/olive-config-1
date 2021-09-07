@@ -6,9 +6,9 @@ server:
     key-store-password: P@ssw0rd
     key-store: file:/home/carmel/tomcat.p12
     key-store-type: pkcs12
-#     key-password: P@ssw0rd
-#     trust.store: file:/home/carmel/tomcat.p12
-#     trust.store.password: P@ssw0rd
+    key-password: P@ssw0rd
+    trust.store: file:/home/carmel/tomcat.p12
+    trust.store.password: P@ssw0rd
 
 spring:
   application:
