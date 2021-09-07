@@ -1,14 +1,14 @@
 server:
   port: 7072
-  ssl:
-    enabled: true
-    key-store: file:/home/carmel/tomcat.p12
-    key-store-password: P@ssw0rd
-    key-store-type: pkcs12
-    key-alias: tomcat
-    key-password: P@ssw0rd
-    trust.store: file:/home/carmel/tomcat.p12
-    trust.store.password: P@ssw0rd
+#   ssl:
+#     enabled: true
+#     key-store: file:/home/carmel/tomcat.p12
+#     key-store-password: P@ssw0rd
+#     key-store-type: pkcs12
+#     key-alias: tomcat
+#     key-password: P@ssw0rd
+#     trust.store: file:/home/carmel/tomcat.p12
+#     trust.store.password: P@ssw0rd
   
 #eureka:
 #  client:
